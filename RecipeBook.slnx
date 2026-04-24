@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="RecipeBook.App/RecipeBook.App.csproj" />
+  <Project Path="RecipeBook.Core/RecipeBook.Core.csproj" />
+</Solution>

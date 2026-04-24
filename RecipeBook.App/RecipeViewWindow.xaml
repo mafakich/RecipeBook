@@ -1,0 +1,17 @@
+﻿<Window x:Class="RecipeBook.App.RecipeViewWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Просмотр рецепта" Height="500" Width="600" WindowStartupLocation="CenterOwner">
+    <ScrollViewer Margin="10">
+        <StackPanel>
+            <TextBlock Text="{Binding Title}" FontSize="24" FontWeight="Bold"/>
+            <TextBlock Text="{Binding CategoryName}" Foreground="Gray" Margin="0,5"/>
+            <TextBlock Text="{Binding DetailsText}" Margin="0,10,0,5"/>
+            <TextBlock Text="Ингредиенты:" FontWeight="Bold" Margin="0,10,0,5"/>
+            <ListBox ItemsSource="{Binding IngredientsList}" BorderBrush="Transparent" Background="Transparent"/>
+            <TextBlock Text="Шаги приготовления:" FontWeight="Bold" Margin="0,15,0,5"/>
+            <ListBox ItemsSource="{Binding StepsList}" BorderBrush="Transparent" Background="Transparent"/>
+            <Button Content="Закрыть" HorizontalAlignment="Right" Margin="0,20,0,0" Click="CloseButton_Click"/>
+        </StackPanel>
+    </ScrollViewer>
+</Window>
